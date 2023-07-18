@@ -18,13 +18,15 @@
             <span class="navbar-brand mb-0 h1">site do th</span>
         </div>
       </nav>
+      <form action="{% url 'listagem_usuarios' %}" method="post">
+        {% csrf_token %}
       <div style="text-align: center;" class="conteiner">
           <h1>Cadastro de usuarios</h1>
-          nome <input class="form-control-sm" type="text">
-          idade <input class="form-control-sm" type="text">
+          nome <input name="nome" class="form-control-sm" type="text">
+          idade <input name="idade" class="form-control-sm" type="text">
           <button class="form-control-sm">enviar</button>
         </div>
-
+      </form>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
